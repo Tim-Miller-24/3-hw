@@ -13,15 +13,22 @@ if (isNaN(degree) || degree == 0) {
     degree = 2;
 }
 
-let answer = Math.pow(num, degree)
+//let answer = Math.pow(num, degree)
+
+let indexNow = num;
+
+for (let i = 1; i < degree; i++) {
+    indexNow = indexNow * num;
+}
+
+//alert(answer);
+alert(indexNow);
 
 
-alert(answer);
 
 
-
-/*
-    Задание: (ЛЕСТНИЦА)
+/* 
+  //  Задание: (ЛЕСТНИЦА)
     
 let quantity = +prompt('Введите количество ступеней лестницы.');
 
@@ -41,10 +48,12 @@ while (symbolend == '') {
     symbolend = prompt('Введите конечный символ.');
 }
 
-for (let i = 1; i <= quantity; i++) {    
-    symbolstart += symbolstart ;
-    console.log(symbolstart + symbolend);
-}
+let symbolNow = symbolstart;
+console.log(symbolNow + symbolend);
+for (let i = 1; i < quantity; i++) {    
+    symbolNow += symbolstart ;
+    console.log(symbolNow + symbolend);
+} */
 
 
-*/
+
